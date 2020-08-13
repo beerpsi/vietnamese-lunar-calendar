@@ -27,6 +27,7 @@ ________________________________________________________
 Executed in  230.86 millis    fish           external
    usr time  305.43 millis    0.00 micros  305.43 millis
    sys time   40.88 millis  793.00 micros   40.09 millis
+```
 
 # TODO
 - [ ] Add the ability to format the output string, like `date`
