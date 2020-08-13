@@ -23,7 +23,7 @@ Executed in  815.77 millis    fish           external
    sys time   94.90 millis  705.00 micros   94.20 millis
    
 $ javac VietCalendar.java
-$ java VietCalendar
+$ time java VietCalendar
 2020-06-24
 ________________________________________________________
 Executed in  230.86 millis    fish           external
