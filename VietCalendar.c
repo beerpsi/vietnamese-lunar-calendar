@@ -1,12 +1,13 @@
 /*
  * Implementation of VietCalendar.java (author Ho Ngoc Duc) in C
- * @author beerpsi
- * github.com/beerpsi
+ * Author: beerpsi
+ * https://github.com/beerpsi
+ * Ho Ngoc Duc's website: http://www.informatik.uni-leipzig.de/~duc/
  */
 
-#include <stdio.h>
-#include <math.h>
-#include <time.h>
+#include <stdio.h> /* printing out the time */
+#include <math.h> /* sin, M_PI */
+#include <time.h> /* getting system time to convert */
 
 struct date {
     char date_mday; /* Day of the month */
@@ -193,8 +194,8 @@ int main(){
     time_t now = time(0);
     struct tm *now_tm = localtime(&now);
     char day = (char)now_tm->tm_mday;
-    char month = (char)(now_tm->tm_mon+1);
-    long year = (long)(now_tm->tm_year+1900);
+    char month = (char)(now_tm->tm_mon+1); /* Add one so the month value is 1-12 instead of 0-11 */
+    long year = (long)(now_tm->tm_year+1900); /* Add 1900 to get current year */
     struct date l = convert_solar_lunar(day, month, year, time_zone);
     printf("%ld-%02d-%02d",l.date_year,l.date_mon,l.date_mday);
 }
